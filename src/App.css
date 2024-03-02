@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+.App{
+    text-align: center;
+    height: fit-content;
+    max-height: max-content;
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    /* padding-bottom: 40px; */
+
+}
+.App-header{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex: wrap;
+}
+.animeGrid{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+    gap: 0px; /* adjust as needed */
+    justify-items: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: hsla(202, 68%, 39%, 0.884);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.25s ease;
+    border-radius: 8px;
+}
+button:hover{
+    background-color: hsla(212, 81%, 23%, 0.822);
+    color: white;
+    box-shadow: inset 0 0px 30px  10px hsl(202, 68%, 39%);
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

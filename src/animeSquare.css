@@ -1,0 +1,34 @@
+.animeSquareContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+    border: 2px solid hsla(180, 28%, 63%, 0.356);
+
+}
+.animeSquareContainer img:hover{
+    background-color: hsla(202, 68%, 39%, 0.884);
+    color: white;
+}
+.animeSquareContainer img{
+    
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 10px;
+    transition: 0.25s ease;
+}
+.selected {
+    border: 2px solid hsl(202, 68%, 39%); /* or any other style you want */
+    box-shadow: inset 0 0px 30px  10px hsl(202, 68%, 39%);
+    outline: 3px solid hsl(202, 68%, 39%);
+    
+  }
+  .no-selected-style {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  
