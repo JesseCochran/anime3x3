@@ -8,7 +8,9 @@ function App() {
 
   const [selectedSquare, setSelectedSquare] = useState(null);
   const [selectedImages, setSelectedImages] = useState([null, null, null, null, null, null, null, null, null]); // Add more nulls if you have more AnimeSquare components
-
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const handleImageSelect = (image) => {
     const newSelectedImages = [...selectedImages];
     newSelectedImages[selectedSquare] = image;
@@ -45,9 +47,40 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>My Favourite Anime 3x3</h1>
-        <img src="info.svg" alt="importantInfo" id="importantInfo" />
-
       </header>
+      <img src="info.svg" alt="importantInfo" id="importantInfo" onClick={() => {
+        if (isAnimating) return; // Don't do anything if the sidebar is currently animating
+
+        setIsAnimating(true);
+
+        if (isSidebarOpen) {
+          setIsSidebarOpen(false);
+          setTimeout(() => {
+            setIsSidebarVisible(false);
+            setIsAnimating(false); // The sidebar has finished animating
+          }, 250); // 250ms is the duration of the slideOut animation
+        } else {
+          setIsSidebarOpen(true);
+          setIsSidebarVisible(true);
+          setTimeout(() => setIsAnimating(false), 250); // The sidebar has finished animating
+        }
+      }
+      } />
+      {isSidebarVisible && (
+        <div id="sidebar" className={isSidebarOpen ? 'open' : ''}>
+          <h2>What is a 3x3?</h2>
+          {/* <p>A 3x3 is a grid of 9 images, each representing one of your favorite things in a given category, this website specifically is for making Anime 3x3. <br></br>
+            It's a way to share your tastes with others.</p> */}
+          <p>An anime 3x3 is a grid of 9 images, each representing one of your favorite anime. <br></br> It's a way to share your tastes with others.</p>
+          <h2>How to use this website</h2>
+          <p>Click on any of the 9 squares to select it, then use the search bar to find an image to fill that square by clicking on a show's image. <br></br>
+            Once you have all 9 squares filled, you can download the image using the buttons below the grid.</p> <br></br>
+
+          <p>Created By Jesse Cochran</p>
+          <a href="https://github.com/JesseCochran" target="_blank" rel="noreferrer">Other Projects</a>
+
+        </div>
+      )}
       <SearchBar setSelectedImage={handleImageSelect} />
       <div className="animeGrid">
         {[...Array(9)].map((_, index) => (
