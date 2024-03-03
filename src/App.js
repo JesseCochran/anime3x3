@@ -45,6 +45,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>My Favourite Anime 3x3</h1>
+        <img src="info.svg" alt="importantInfo" id="importantInfo" />
 
       </header>
       <SearchBar setSelectedImage={handleImageSelect} />

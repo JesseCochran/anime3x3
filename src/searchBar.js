@@ -71,16 +71,23 @@ function SearchBar({ setSelectedImage }) {
             getAnimes();
         }
     }
+    function clearSearch() {
+        document.getElementById("searchAnime").value = '';
+        setSearchTerm('');
+    }
 
     const imagesToShow = images.slice(currentPage * imagesPerPage, (currentPage + 1) * imagesPerPage);
 
     return (
         <div>
             {/* <h1>Search Bar</h1> */}
-            <input type="text" placeholder="Search..." id="searchAnime" value={searchTerm}
-                onChange={e => setSearchTerm(e.target.value)}
-                onKeyDown={handleKeyPress} />
-            <button id="searchButton" onClick={getAnimes}>Search</button>
+            <div id="searchOptions">
+                <img src="clear.svg" alt="clear" id="clearIcon" onClick={clearSearch} />
+                <input type="text" placeholder="Search..." id="searchAnime" value={searchTerm}
+                    onChange={e => setSearchTerm(e.target.value)}
+                    onKeyDown={handleKeyPress} />
+                <button id="searchButton" onClick={getAnimes}>Search</button>
+            </div>
             {isLoading && <p>Loading...</p>}
             <div id="animeResults">
                 {imagesToShow.map(image => (

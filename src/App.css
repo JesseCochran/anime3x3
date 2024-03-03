@@ -47,4 +47,19 @@ button:hover{
     box-shadow: inset 0 0px 30px  10px hsl(202, 68%, 39%);
     
 }
-
+#importantInfo{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition : 0.25s ease;
+    position: fixed;
+    cursor: pointer;
+  bottom: 50px; /* Adjust as needed */
+  right: 150px; /* Adjust as needed */
+    
+}
+#importantInfo:hover{
+    transform: scale(1.3);
+    box-shadow: 0 0 40px #02d9e0;
+    transition : 0.25s ease;
+}
