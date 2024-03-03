@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.699579de.css",
-    "main.js": "/static/js/main.008fa992.js",
-    "static/js/453.32bde57d.chunk.js": "/static/js/453.32bde57d.chunk.js",
-    "index.html": "/index.html",
-    "main.699579de.css.map": "/static/css/main.699579de.css.map",
-    "main.008fa992.js.map": "/static/js/main.008fa992.js.map",
-    "453.32bde57d.chunk.js.map": "/static/js/453.32bde57d.chunk.js.map"
+    "main.css": "/JesseCochran/anime3x3/static/css/main.699579de.css",
+    "main.js": "/JesseCochran/anime3x3/static/js/main.6a5fdf75.js",
+    "static/js/453.32bde57d.chunk.js": "/JesseCochran/anime3x3/static/js/453.32bde57d.chunk.js",
+    "index.html": "/JesseCochran/anime3x3/index.html",
+    "main.699579de.css.map": "/JesseCochran/anime3x3/static/css/main.699579de.css.map",
+    "main.6a5fdf75.js.map": "/JesseCochran/anime3x3/static/js/main.6a5fdf75.js.map",
+    "453.32bde57d.chunk.js.map": "/JesseCochran/anime3x3/static/js/453.32bde57d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.699579de.css",
-    "static/js/main.008fa992.js"
+    "static/js/main.6a5fdf75.js"
   ]
 }
