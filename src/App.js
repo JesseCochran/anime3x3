@@ -27,7 +27,14 @@ function App() {
       selectedNode.classList.add('no-selected-style');
     }
 
-    domtoimage.toPng(node)
+    domtoimage.toPng(node, {
+      style: {
+        transform: 'scale(' + window.devicePixelRatio + ')',
+        transformOrigin: 'top left',
+        width: node.offsetWidth + 'px',
+        height: node.offsetHeight + 'px'
+      }
+    })
       .then((dataUrl) => {
         if (selectedNode) {
           selectedNode.classList.remove('no-selected-style');
